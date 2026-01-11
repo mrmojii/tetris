@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=4 uid="uid://d1big1x87u4gi"]
+
+[ext_resource type="Script" uid="uid://md7t7yhi0nro" path="res://test/test_scene_1.gd" id="1_c3n5a"]
+[ext_resource type="Texture2D" uid="uid://bmwqj5ay61jfh" path="res://icon.svg" id="1_sairk"]
+[ext_resource type="Script" uid="uid://caghy71sw12tu" path="res://test/tile_map_layer.gd" id="2_wx1q5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sairk"]
+texture = ExtResource("1_sairk")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_c3n5a"]
+tile_size = Vector2i(128, 128)
+sources/2 = SubResource("TileSetAtlasSource_sairk")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_c3n5a")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAACAAIAAgAAAAAAAAACAAMAAgAAAAAAAAACAAEAAgAAAAAAAAADAAEAAgAAAAAAAAAEAAEAAgAAAAAAAAAEAAIAAgAAAAAAAAADAAIAAgAAAAAAAAADAAMAAgAAAAAAAAAEAAMAAgAAAAAAAAA=")
+tile_set = SubResource("TileSet_c3n5a")
+script = ExtResource("2_wx1q5")
