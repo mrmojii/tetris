@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1big1x87u4gi"]
+
+[ext_resource type="Script" uid="uid://md7t7yhi0nro" path="res://test/main_scene.gd" id="1_l12mn"]
+[ext_resource type="Script" uid="uid://bokwjj26eppkp" path="res://test/generator.gd" id="4_m8ogm"]
+
+[node name="MainScene" type="Node2D" node_paths=PackedStringArray("generator")]
+script = ExtResource("1_l12mn")
+generator = NodePath("Generator")
+
+[node name="Generator" type="Node" parent="."]
+script = ExtResource("4_m8ogm")
